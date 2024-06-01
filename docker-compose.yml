@@ -9,7 +9,7 @@ services:
     environment:
       MYSQL_DATABASE: 'Live_Stream'
       MYSQL_USER: 'admin'
-      MYSQL_PASSWORD: ''
+      MYSQL_PASSWORD: '
     ports:
       - '3306:3306'
     volumes:
@@ -24,9 +24,6 @@ services:
       LISTEN_IP: '0.0.0.0'
       PORT: '3016'
       CLIENT_URL: http://localhost:3016
-      DATABASE_DEV_URL: mysql://admin:L!ve5tream@mysql:3306/Live_Stream
-      DATABASE_TEST_URL: mysql://admin:L!ve5tream@mysql:3306/Live_Stream_Test
-      
     depends_on:
       - mysql
 
