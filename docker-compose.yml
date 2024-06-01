@@ -27,7 +27,7 @@ services:
       DATABASE_DEV_URL: mysql://admin:L!ve5tream@mysql:3306/Live_Stream
       DATABASE_TEST_URL: mysql://admin:L!ve5tream@mysql:3306/Live_Stream_Test
       google_client_id: 'google-client-id'
-      google_client_secret: 'google-client-secret'
+      google_client_sec: 'google-client'
     depends_on:
       - mysql
 
