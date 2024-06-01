@@ -30,6 +30,8 @@ var userss;
 appsss.use(passport.initialize());
 appsss.use(passport.session());
 // router.get('/error', (req, res) => res.send("error logging in"));
+const dotenv = require("dotenv");
+dotenv.config();
 
 passport.serializeUser(function (user, cb) {
   cb(null, user);
@@ -40,9 +42,8 @@ passport.deserializeUser(function (obj, cb) {
 });
 var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 const { result } = require('lodash');
-const GOOGLE_CLIENT_ID =
-'278178625523-0ooikkn9di5ks61vf210p5h9v0aao3hp.apps.googleusercontent.com'
-const GOOGLE_CLIENT_SECRET = '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';
+const GOOGLE_CLIENT_ID = process.env.google_client_id
+const GOOGLE_CLIENT_SECRET = process.env.google_client_secret
 
 passport.use(
   new GoogleStrategy(
