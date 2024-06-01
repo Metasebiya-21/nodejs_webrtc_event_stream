@@ -94,12 +94,12 @@ router.put(
       var transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-          user: 'alemgenateferi1@gmail.com',
-          pass: '0930869450',
+          user: 'metasebiya8@gmail.com',
+          pass: 'pass',
         },
       });
       var mailOptions = {
-        from: 'alemgenateferi1@gmail.com', //alemgenateferi1@gmail.com
+        from: 'metasebiya8@gmail.com', //metasebiya8@gmail.com
         to: userEmail.email,
         subject: 'some updates there on ' + data.fileName,
         html:

@@ -33,15 +33,15 @@ router.post('/sentEmail', async (req, res) => {
         service: 'Gmail',
         secure: true,
         auth: {
-          user: 'alemgenateferi1@gmail.com',
-          pass: '0930869450',
+          user: 'metasebiya8@gmail.com',
+          pass: 'pass',
         },
         tls: {
           rejectUnauthorized: false,
         },
       });
       var mailOptions = {
-        from: 'alemgenateferi1@gmail.com',
+        from: 'metasebiya8@gmail.com',
         to: email,
         subject: 'Email verification.',
         html:
