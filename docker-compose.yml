@@ -9,7 +9,7 @@ services:
     environment:
       MYSQL_DATABASE: 'Live_Stream'
       MYSQL_USER: 'admin'
-      MYSQL_PASSWORD: 'L!ve5tream'
+      MYSQL_PASSWORD: ''
     ports:
       - '3306:3306'
     volumes:
