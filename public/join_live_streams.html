@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+		<meta content="utf-8" http-equiv="encoding">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+		<title>RCNDC Team Collaboration App</title>
+		<script src="/socket.io/socket.io.js"></script>
+		<script type="module" src="../public/js/join_live_streams.js"></script>
+	</head>
+	<body>
+		<div class="join-container">
+			<header class="join-header">
+				<h1><i class="fas fa-smile"></i> Live Events</h1>
+			</header>
+			<main class="join-main">
+				<h2>Consumer</h2>
+				<form action="consume_live_events">
+					<div class="form-control">
+						<label for="username">Username</label>
+						<input
+							type="text"
+							name="username"
+							id="username"
+							placeholder="Enter username..."
+							required
+						/>
+					</div>
+					<div class="form-control">
+						<label for="live_event">Live Events</label>
+						<select name="live_event" id="list_live_events"></select>
+					</div>
+					<button type="submit" class="btn">Join Live Events</button>
+				</form>
+			</main>
+		</div>
+	</body>
+</html>

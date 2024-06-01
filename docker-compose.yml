@@ -1,0 +1,32 @@
+version: '3.7'
+
+volumes:
+  mysql_data:
+services:
+  mysql:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'Live_Stream'
+      MYSQL_USER: 'admin'
+      MYSQL_PASSWORD: 'L!ve5tream'
+    ports:
+      - '3306:3306'
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  api:
+    build: .
+    ports:
+      - '3016:3016'
+    environment:
+      NODE_ENV: 'development'
+      LISTEN_IP: '0.0.0.0'
+      PORT: '3016'
+      CLIENT_URL: 'http://localhost:3016'
+      DATABASE_DEV_URL: 'mysql://admin:L!ve5tream@mysql:3306/Live_Stream'
+      DATABASE_TEST_URL: 'mysql://admin:L!ve5tream@mysql:3306/Live_Stream_Test'
+    depends_on:
+      - mysql
+
+

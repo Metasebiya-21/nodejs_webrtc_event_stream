@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+		<meta content="utf-8" http-equiv="encoding">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+		<!link rel="stylesheet" href="css/style.css" />
+		<title>RCNDC Team Collaboration App</title>
+	</head>
+	<body>
+		<div class="join-container">
+			<header class="join-header">
+				<h1></i> Live Events</h1>
+			</header>
+			<main class="join-main">
+				<h2>Producer</h2>
+				<form action="produce_live_events">
+					<div class="form-control">
+						<label for="username">Username</label>
+						<input
+							type="text"
+							name="username"
+							id="username"
+							placeholder="Enter username..."
+							required
+						/>
+					</div>
+					<div class="form-control">
+						<label for="event_name">Live Event Name</label>
+							<input
+							type="text"
+							name="event_name"
+							id="live_event"
+							placeholder="Enter Live Event Name..."
+							required
+						/>
+					</div>
+					<div>
+						<label for="event_name">Public Event</label>
+							<input
+							type="radio"
+							name="event_type"
+							id="Public"
+							value="Public"
+							required
+							/>
+					</div>
+					<div>
+						<label for="event_name">Private Event</label>
+							<input
+							type="radio" name="event_type"
+							id="Private"
+							value="Private"
+							required
+							/>
+					</div>
+					<button type="submit" class="btn">Stream Events Live</button>
+				</form>
+				<br>
+				<br>
+			</main>
+		</div>
+	</body>
+</html>

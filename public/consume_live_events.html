@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   
+    <title>Document</title>
+    <!link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="./media/image/mediasoup.png"/>
+    
+  </head>
+  <body>
+      <table>
+        <tr>
+          <td>
+            <div>Live_Event</div>
+            <video id="live_event" controls playsinline></video>
+          </td>
+        </tr>
+        <tr>
+          <legend>Live Event Discription</legend>
+          <div>
+            <textarea id="led" name="liveEventDiscription" rows="4" cols="50">
+             
+              </textarea>
+          </div>
+        </fieldset>
+        </tr>
+      </table>
+      <br>
+      <table>
+        <tr>
+          <td>
+            <fieldset id="Video_controls" disabled>
+              <legend>Video Controls </legend>
+              <div><button id="backward">backward</button> </div>
+              <div><button id="play">play</button> </div>
+              <div><button id="pause">pause</button> </div>
+              <div><button id="forward">forward</button> </div>
+            </fieldset>
+          </td>
+          <td>
+            <fieldset id="Volume_Controls" disabled>
+              <legend>Volume Controls</legend>
+              <div><button id="mute">mute</button></div>
+              <div><button id="volume_up">volume up</button></div>
+              <div><button id="volume_down">volume_down</button></div>
+            </fieldset>
+          </td>
+          <td>
+            <fieldset id="Subscribtion_Control">
+              <legend>Subscription</legend>
+              <div><button id="subscribe">Subscribe</button> <span id="sub_status"></span></div>
+              <div><button id="unsubscribe">Un subscribe</button> <span id="unsub_status"></span></div>
+            </fieldset>
+            <fieldset id="restartIce">
+              <legend>restart Ice</legend>
+              <div><button id="restartIce">restartIce</button>  <span id="restartIce"></span> </div>
+            </fieldset>
+          </td>
+        </tr>
+      </table>
+      <div class="chat-container">
+        <header class="chat-header">
+          <h1>Live Chat Panel</h1>
+        </header>
+        <main class="chat-main">
+          <div class="chat-sidebar">
+            <h3>Event Name:</h3>
+            <h2 id="eventName"></h2>
+            <h3>Users</h3>
+            <ul id="users"></ul>
+          </div>
+          <div class="chat-messages"></div>
+        </main>
+        <div class="chat-form-container">
+          <form id="chat-form">
+            <input id="msg" type="text" placeholder="Enter Message" required autocomplete="off"/>
+            <button class="btn"> Send </button>
+          </form>
+        </div>
+      </div>
+      <script>
+        // window.localStorage.setItem('debug', 'mediasoup-client:WARN* mediasoup-client:ERROR*');
+        window.localStorage.setItem('debug', 'mediasoup-client:*');
+      </script>
+      <script src="/socket.io/socket.io.js"></script>
+      <script type="module" src="../public/js/consumer.js"></script>
+    </body>
+</html>
+

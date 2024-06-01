@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   
+    <title>Document</title>
+    <!link rel="stylesheet" href="css/style.css">
+    
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script type="module" src="../public/js/producer.js"></script>
+  </head>
+  <body>
+
+<body>
+  <h1>Publish Live Event</h1>
+
+  <table>
+    <tr>
+      <td>
+        <video id="live_event" controls autoplay playsinline></video>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table>
+    <tr>
+      <td>
+        <fieldset id="fs_publish">
+          <legend>Publishing Source</legend>
+          <div>Connection Status:<span id="connection_status"></span></div>
+          <div><label><input type="checkbox" id="simulcast"> Use Simulcast</label></div>
+          <div><button id="webcam">publish webcam</button>  <span id="webcam_status"></span> </div>
+          <div><button id="screen">publish screen</button>  <span id="screen_status"></span> </div>
+            <div>
+            <label for="audioSource">Audio Source</label>
+            <select name="audio_source" id="audio_ip_source"></select>
+            </div>
+          <div>
+            <label for="videoSource">Video Source</label>
+            <select name="video_source" id="video_ip_source"></select>
+          </div>
+          <button id="externalSource">publish From External Source</button>  <span id="pubXsrc_status"></span> 
+        </fieldset>
+        <fieldset id="Live Event Discription">
+          <legend>Live Event Discription</legend>
+          <div>
+            <textarea id="led" name="liveEventDiscription" rows="4" cols="50"  placeholder="Type, paste, cut text here...">
+             
+              </textarea>
+              <div><button id="publishLiveEventDiscription">publish LiveEvent Discription</button>  <span id="publishLiveEventDiscription_Status"></span> </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Record & Upload Live Stream</legend>
+          <div></div><button id="recordButton" disabled>Start Recording</button>  <span id="recordButton_status"></span> </div>
+          <div></div><button id="previewButton" disabled>preview Recorded Stream</button>  <span id="previewButton_status"></span> </div>
+          <div></div><button id="downloadButton" disabled>Download Recorded Stream</button>  <span id="downloadButton_status"></span>  </div>
+          <div></div><button id="uploadButton"  disabled>Upload Recorded Stream</button>  <span id="uploadButton_status"></span>  </div>
+          <div></div><button id="deleteButton" disabled>Delete Recorded Stream</button>  <span id="deleteButton_status"></span> </div>
+          <div>
+            <label for="RecordingFormat">Recording Format</label>
+            <select name="RecordingFormat" id="codecPreferences" disabled></select>
+          </div>
+      </fieldset>
+        
+        <fieldset id="publishing status">
+          <legend>Stop Live Stream</legend>
+          <div><button id="halt" disabled>Halt Live Stream</button>  <span id="Halt_Status"></span> </div>
+        </fieldset>
+        <fieldset id="invitation link">
+          <fieldset id="restartIce">
+            <legend>restart Ice</legend>
+            <div><button id="restartIce">restartIce</button>  <span id="restartIce"></span> </div>
+          </fieldset>
+          <fieldset id="invitation link">
+          <legend>invitation link</legend>
+          <div>
+            <textarea id="invitationLink" name="invitation_link" rows="4" cols="50" disabled readonly>
+             
+              </textarea>
+          </div>
+        </fieldset>
+      </td>
+    </tr>
+  </table>
+  <div class="chat-container">
+    <header class="chat-header">
+      <h1>Live Chat Panel</h1>
+    </header>
+    <main class="chat-main">
+      <div class="chat-sidebar">
+        <h3>Event Name:</h3>
+        <h2 id="eventName"></h2>
+        <h3>Users</h3>
+        <ul id="users"></ul>
+      </div>
+      <div class="chat-messages"></div>
+    </main>
+    <div class="chat-form-container">
+      <form id="chatform">
+        <input id="msg" type="text" placeholder="Enter Message" required autocomplete="off"/>
+        <button class="btn"> Send </button>
+      </form>
+    </div>
+  </div>
+  <script>
+    // window.localStorage.setItem('debug', 'mediasoup-client:WARN* mediasoup-client:ERROR*');
+    window.localStorage.setItem('debug', 'mediasoup-client:*');
+  </script>
+  <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+  <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+
+  </body>
+</html>

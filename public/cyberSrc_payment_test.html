@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method= "post" action='https://testsecureacceptance.cybersource.com/pay'></form>
+
+        <div>
+            <label for="accessKey">Access Key</label>
+            <input type="text" name="accessKey" id="accessKey" placeholder="Enter accessKey..." require/>
+        </div>
+       
+        <div>
+            <label for="locale">locale</label>
+            <input type="text" name="locale" id="locale" placeholder="Enter locale..." require/>
+        </div>
+        
+        <div>
+            <label for="paymentMethod">payment Method</label>
+            <input type="text" name="paymentMethod" id="paymentMethod" placeholder="Enter payment Method..." require/>
+        </div>
+        
+        <div>
+            <label for="profile_id">Profile Id</label>
+            <input type="text" name="profile_id" id="profile_id" placeholder="Enter profile Id..." require/>
+        </div>
+        
+        <div>
+            <label for="signature">Signature</label>
+            <input type="text" name="signature" id="signature" placeholder="Enter signature..." require/>
+        </div>
+        
+        <div>
+            <label for="signed_date_time">signed_date_time</label>
+            <input type="text" name="signed_date_time" id="signed_date_time" placeholder="Enter signed_date_time..." require/>
+        </div>
+        
+        <div>
+            <label for="signed_field_names">signed_field_names</label>
+            <input type="text" name="signed_field_names" id="signed_field_names" placeholder="Enter signed_field_names..." require/>
+        </div>
+        
+        <div>
+            <label for="transaction_type">transaction_type</label>
+            <input type="text" name="transaction_type" id="transaction_type" placeholder="Enter transaction_type..." require/>
+        </div>
+        
+        <div>
+            <label for="transaction_uuid">transaction_uuid</label>
+            <input type="text" name="transaction_uuid" id="transaction_uuid" placeholder="Enter transaction_uuid..." require/>
+        </div>
+        
+        <div>
+            <label for="unsigned_field_names">unsigned_field_names</label>
+            <input type="text" name="unsigned_field_names" id="unsigned_field_names" placeholder="Enter unsigned_field_names..." require/>
+        </div>
+        
+        <div>
+            <label for="reference_number">reference_number</label>
+            <input type="text" name="reference_number" id="reference_number" placeholder="Enter reference_number..." require/>
+        </div>
+        <div>
+            <label for="amount">amount</label>
+            <input type="text" name="amount" id="amount" placeholder="Enter amount..." require/>
+        </div>
+        <div>
+            <label for="currency">currency</label>
+            <input type="text" name="currency" id="currency" placeholder="Enter currency..." require/>
+        </div>
+        <button type="submit" class="btn">pay</button>
+    </form>
+</body>
+</html>
