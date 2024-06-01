@@ -26,7 +26,7 @@ services:
       CLIENT_URL: http://localhost:3016
       DATABASE_DEV_URL: mysql://admin:L!ve5tream@mysql:3306/Live_Stream
       DATABASE_TEST_URL: mysql://admin:L!ve5tream@mysql:3306/Live_Stream_Test
-      google_client_id: 'google-client-id'
+      
     depends_on:
       - mysql
 
